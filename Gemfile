@@ -1,13 +1,14 @@
 source 'https://rubygems.org'
 
 ruby '2.1.3'
-
-# Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.6'
-#gem 'pg'
-
 gem 'bootstrap-sass', '2.3.2.0'
 gem 'sprockets', '2.11.0'
+# gem 'bcrypt-ruby', '>= 3.1.2'
+# gem 'bcrypt-ruby', '3.1.2'
+
+# Use ActiveModel has_secure_password
+gem 'bcrypt', '~> 3.1.7'
 
 group :development, :test do
 	gem 'sqlite3'
@@ -46,8 +47,6 @@ gem 'jbuilder', '~> 2.0'
 # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
 gem 'spring',        group: :development
 
-# Use ActiveModel has_secure_password
-# gem 'bcrypt', '~> 3.1.7'
 
 # Use unicorn as the app server
 # gem 'unicorn'
