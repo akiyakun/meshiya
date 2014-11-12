@@ -63,7 +63,11 @@ describe "User Pages" do
 
 	describe "edit page" do
 		let( :user ) { FactoryGirl.create( :user ) }
-		before { visit edit_user_path( user ) }
+
+		before do
+			sign_in user
+			visit edit_user_path( user )
+		end
 
 		describe "page" do
 			it { should have_content( "Update your profile" ) }
@@ -72,23 +76,9 @@ describe "User Pages" do
 		end
 
 		describe "with invalid information" do
-			before { click_button "Save changes" }
-
-			it { should have_content( 'error' ) }
-		end
-	end
-
-	describe "edit" do
-		let( :user ) { FactoryGirl.create( :user ) }
-
-		before do
-			sign_in user
-			visit edit_user_path( user )
-		end
-
-		describe "with invalid information" do
 			let( :new_name )  { "New Name" }
 			let( :new_email ) { "new@example.com" }
+
 			before do
 				fill_in "Name",             with: new_name
 				fill_in "Email",            with: new_email

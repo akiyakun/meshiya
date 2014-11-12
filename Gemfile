@@ -1,5 +1,11 @@
 source 'https://rubygems.org'
 
+# x.x.x	バージョンを固定
+# >= x.x.x	x.x.x以上のバージョンが必要
+# >= x.x.x, < y.y.y	x.x.x以上、y.y.y以下のバージョンが必要
+# ~> x.0	x.1からx.9は良いが、メインのバージョンがあがるとは不可
+# 例えば、3.2は良いが、4.0は不可など
+
 ruby '2.1.3'
 gem 'rails', '4.1.6'
 gem 'bootstrap-sass', '2.3.2.0'
@@ -12,7 +18,7 @@ gem 'bcrypt', '~> 3.1.7'
 
 group :development, :test do
 	gem 'sqlite3'
-	gem 'rspec-rails', '2.13.1'
+	gem 'rspec-rails', '~> 2.14.0.rc1'
 end
 
 group :test do
