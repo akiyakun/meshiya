@@ -1,4 +1,5 @@
 source 'https://rubygems.org'
+ruby '2.1.3'
 
 # x.x.x	バージョンを固定
 # >= x.x.x	x.x.x以上のバージョンが必要
@@ -6,15 +7,19 @@ source 'https://rubygems.org'
 # ~> x.0	x.1からx.9は良いが、メインのバージョンがあがるとは不可
 # 例えば、3.2は良いが、4.0は不可など
 
-ruby '2.1.3'
 gem 'rails', '4.1.6'
-gem 'bootstrap-sass', '2.3.2.0'
 gem 'sprockets', '2.11.0'
-# gem 'bcrypt-ruby', '>= 3.1.2'
-# gem 'bcrypt-ruby', '3.1.2'
+gem 'will_paginate', '3.0.4'
+
+# Use Bootstraps
+gem 'bootstrap-sass', '2.3.2.0'
+gem 'bootstrap-will_paginate', '0.0.9'
 
 # Use ActiveModel has_secure_password
 gem 'bcrypt', '~> 3.1.7'
+
+# Use auto creation sample users
+gem 'faker', '1.1.2'
 
 group :development, :test do
 	gem 'sqlite3'
