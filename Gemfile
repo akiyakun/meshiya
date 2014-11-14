@@ -9,14 +9,11 @@ ruby '2.1.3'
 
 gem 'rails', '4.1.6'
 gem 'sprockets', '2.11.0'
-# gem 'will_paginate', '3.0.4'
-gem 'will_paginate'
-# gem 'mislav-will_paginate'
+gem 'will_paginate', '3.0.7'
 
 # Use Bootstraps
 gem 'bootstrap-sass', '2.3.2.0'
-# gem 'bootstrap-will_paginate', '0.0.9'
-gem 'bootstrap-will_paginate'
+gem 'bootstrap-will_paginate', '0.0.10'
 
 # Use ActiveModel has_secure_password
 gem 'bcrypt', '~> 3.1.7'
