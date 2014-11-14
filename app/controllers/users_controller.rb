@@ -27,28 +27,33 @@ class UsersController < ApplicationController
   end
 
   def destroy
-  	User.find( params[ :id ] ).destroy
-  	flash[ :success ] = "User destroyed."
-  	redirect_to users_url
+    user = User.find( params[ :id ] )
+    if current_user? user
+      redirect_to( root_path )
+    else
+      user.destroy
+      flash[ :success ] = "User destroyed."
+      redirect_to users_url
+    end
   end
 
   def edit
   end
 
   def update
-  	if @user.update_attributes( user_params )
-		# 更新に成功した場合を扱う
-		flash[ :success ] = "Profile updated"
-		redirect_to @user
-	else
-		render 'edit'
-	end
+    if @user.update_attributes( user_params )
+      # 更新に成功した場合を扱う
+      flash[ :success ] = "Profile updated"
+      redirect_to @user
+    else
+      render 'edit'
+    end
   end
 
   private
   	def user_params
-  		params.require( :user ).permit( :name, :email, :password,
-  										:password_confirmation )
+  		params.require( :user ).permit(
+  			:name, :email, :password, :password_confirmation )
   	end
 
   	# Before actions

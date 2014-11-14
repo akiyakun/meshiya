@@ -17,12 +17,13 @@ gem 'bootstrap-will_paginate', '0.0.10'
 
 # Use ActiveModel has_secure_password
 gem 'bcrypt', '~> 3.1.7'
+#gem 'bcrypt-ruby', '3.1.2'
 
 # Use auto creation sample users
 gem 'faker', '1.1.2'
 
 group :development, :test do
-	gem 'sqlite3'
+	gem 'sqlite3', '1.3.10'
 	gem 'rspec-rails', '~> 2.14.0.rc1'
 end
 
