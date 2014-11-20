@@ -10,7 +10,7 @@ describe "Static pages" do
 
 	describe "Home page" do
 		before { visit root_path }
-		let( :heading )		{ 'Meshiya' }
+		let( :heading )		{ 'hungry' }
 		let( :page_title )	{ '' }
 
 		it_should_behave_like "all static pages"
@@ -61,16 +61,15 @@ describe "Static pages" do
 	it "should have the right links on the layot" do
 		visit root_path
 
-		click_link "About"
-		expect( page ).to have_title( full_title( 'About Us' ) )
-		click_link "Help"
+		# click_link t('w.about')
+		# expect( page ).to have_title( full_title( 'About Us' ) )
+		click_link t('w.help')
 		expect( page ).to have_title( full_title( 'Help' ) )
-		click_link "Contact"
-		expect( page ).to have_title( full_title( 'Contact' ) )
-		click_link "Home"	# 一度ホームに移動
-		click_link "Sign up now!"
-		expect( page ).to have_title( full_title( 'Sign up' ) )
-		click_link "sample app"
-		# expect( page ).to have_title( full_title( 'sample app' ) )
+		# click_link t('w.contact')
+		# expect( page ).to have_title( full_title( 'Contact' ) )
+		# click_link t('w.home')	# 一度ホームに移動
+		# click_link t('w.signout')
+		# expect( page ).to have_title( full_title( 'Sign up' ) )
+		click_link t('app.title')
 	end
 end

@@ -20,4 +20,22 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+  app:
+    title: Meshiya
+    copyright: "Copyright (c) 2011 AQUALIA CO,LTD All Rights Reserved."
+  w:
+    home: Home
+    help: Help
+    contact: Contact
+    about: About
+    users: Users
+    profile: Profile
+    settings: Settings
+    signup: Sign up now!
+    signin: Sign in
+    signout: Sign out
+  msg:
+  err:
+  view:
+    app_title: "Meshiya"
+

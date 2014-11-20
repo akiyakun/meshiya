@@ -5,9 +5,9 @@
   </small>
   <nav>
     <ul>
-      <li><%= link_to "About", about_path %></li>
-      <li><%= link_to "Contact", contact_path %></li>
-      <li><a href="http://news.railstutorial.jp/">News</a></li>
+      <li><%#= link_to t('w.about'), about_path %></li>
+      <li><%#= link_to t('w.contact'), contact_path %></li>
+      <li><%= t('app.copyright') %></li>
     </ul>
   </nav>
 </footer>

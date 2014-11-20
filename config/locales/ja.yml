@@ -1,0 +1,16 @@
+ja:
+  app:
+    title: "メシヤ"
+    copyright: "Copyright (c) 2011 AQUALIA CO,LTD All Rights Reserved."
+  w:
+    home: ホーム
+    help: ヘルプ
+    contact: Contact
+    about: About
+    users: ユーザー
+    profile: プロフィール
+    settings: 設定
+    signup: アカウントの作成
+    signin: サインイン
+    signout: サインアウト
+
