@@ -1,0 +1,10 @@
+ja:
+  static_pages:
+    home:
+      title: Home
+    help:
+      title: Help
+    about:
+      title: About
+    contact:
+      title: Contact

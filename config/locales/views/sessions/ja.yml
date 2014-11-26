@@ -1,0 +1,9 @@
+ja:
+  sessions:
+    new:
+      title: サインイン
+      submit: サインイン
+      email: メール
+      password: パスワード
+      new_user: まだアカウントの作成をしていませんか？
+      signup_now: アカウントを作成する

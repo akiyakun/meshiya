@@ -1,0 +1,10 @@
+en:
+  sessions:
+    new:
+      title: 'Sign in'
+      submit: 'Sign in'
+      name: Name
+      email: E-Mail
+      password: Password
+      new_user: 'New user?'
+      signup_now: 'Sign up now!'

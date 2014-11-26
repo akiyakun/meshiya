@@ -1,0 +1,10 @@
+ja:
+  layouts:
+    header:
+      home: ホーム
+      help: ヘルプ
+    header_signed_in:
+      users: ユーザー
+      account: アカウント
+      profile: プロフィール
+      settings: 設定

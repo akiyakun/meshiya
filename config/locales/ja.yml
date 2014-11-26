@@ -1,16 +1,15 @@
 ja:
   app:
     title: "メシヤ"
-    copyright: "Copyright (c) 2011 AQUALIA CO,LTD All Rights Reserved."
+    project_name: Sansa
+    copyright: "Copyright (c) 2014 AQUALIA CO,LTD All Rights Reserved."
+    www_url: 'http://meshiya.herokuapp.com/'
   w:
-    home: ホーム
-    help: ヘルプ
-    contact: Contact
-    about: About
-    users: ユーザー
-    profile: プロフィール
-    settings: 設定
     signup: アカウントの作成
     signin: サインイン
     signout: サインアウト
-
+    microposts: マイクロポスト
+    admin: 管理者
+  locale:
+    ja: 日本語
+    en: English

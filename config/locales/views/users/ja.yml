@@ -1,0 +1,19 @@
+ja:
+  users:
+    index:
+      title: 全てのユーザー
+    new:
+      title: アカウントの作成
+      submit: 新規作成
+    edit:
+      title: 編集
+      header: プロフィールの更新
+      submit: 更新
+      change: 変更
+    fields:
+      name: 名前
+      email: メール
+      password: パスワード
+      password_confirmation: パスワードの再入力
+    user:
+      delete: 削除

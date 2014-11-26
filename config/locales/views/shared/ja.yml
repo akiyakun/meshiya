@@ -1,0 +1,17 @@
+ja:
+  shared:
+    home_no_signed_in:
+      welcome_msg: 'ようこそ メシヤへ！ お腹空いてる？'
+      about_this_page: 'This is the home page for the'
+    feed_item:
+      posted: 投稿
+      ago: 前
+    micropost_form:
+      placeholder: ここに新しいポストを入力
+      submit: 投稿
+    micropost_delete_link:
+      delete: 削除
+      confirm: 本当に削除してもよろしいですか？
+    user_info:
+      view_profile: プロフィール
+      post_count: のポスト

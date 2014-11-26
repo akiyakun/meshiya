@@ -1,0 +1,17 @@
+en:
+  shared:
+    home_no_signed_in:
+      welcome_msg: 'Welcome to the Meshiya. Are you hungry?'
+      about_this_page: 'This is the home page for the'
+    feed_item:
+      posted: Posted
+      ago: ago.
+    micropost_form:
+      placeholder: "Compose new micropost..."
+      submit: Post
+    micropost_delete_link:
+      delete: delete
+      confirm: 'You sure?'
+    user_info:
+      view_profile: 'view my profile'
+      post_count: micropost

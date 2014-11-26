@@ -1,5 +1,5 @@
 <% if current_user?( object.user ) %>
-  <%= link_to "delete", object, method: "delete",
-    data: { confirm: "You sure?" },
+  <%= link_to t('.delete'), object, method: "delete",
+    data: { confirm: t('.confirm') },
     title: object.content %>
 <% end %>

@@ -1,0 +1,10 @@
+ja:
+  static_pages:
+    home:
+      title: ホーム
+    help:
+      title: ヘルプ
+    about:
+      title: アバウト
+    contact:
+      title: コンタクト

@@ -1,0 +1,10 @@
+en:
+  layouts:
+    header:
+      home: Home
+      help: Help
+    header_signed_in:
+      users: Users
+      account: Account
+      profile: Profile
+      settings: Settings

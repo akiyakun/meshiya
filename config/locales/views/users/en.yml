@@ -1,0 +1,19 @@
+en:
+  users:
+    index:
+      title: 'All Users'
+    new:
+      title: 'Sign up'
+      submit: 'Create my account'
+    edit:
+      title: 'Edit user'
+      header: 'Update your profile'
+      submit: 'Save changes'
+      change: change
+    fields:
+      name: Name
+      email: E-Mail
+      password: Password
+      password_confirmation: Confirm Password
+    user:
+      delete: delete

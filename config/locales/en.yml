@@ -1,41 +1,15 @@
-# Files in the config/locales directory are used for internationalization
-# and are automatically loaded by Rails. If you want to use locales other
-# than English, add the necessary files in this directory.
-#
-# To use the locales, use `I18n.t`:
-#
-#     I18n.t 'hello'
-#
-# In views, this is aliased to just `t`:
-#
-#     <%= t('hello') %>
-#
-# To use a different locale, set it with `I18n.locale`:
-#
-#     I18n.locale = :es
-#
-# This would use the information in config/locales/es.yml.
-#
-# To learn more, please read the Rails Internationalization guide
-# available at http://guides.rubyonrails.org/i18n.html.
-
 en:
   app:
     title: Meshiya
-    copyright: "Copyright (c) 2011 AQUALIA CO,LTD All Rights Reserved."
+    project_name: Sansa
+    copyright: "Copyright (c) 2014 AQUALIA CO,LTD All Rights Reserved."
+    www_url: 'http://meshiya.herokuapp.com/'
   w:
-    home: Home
-    help: Help
-    contact: Contact
-    about: About
-    users: Users
-    profile: Profile
-    settings: Settings
     signup: Sign up now!
     signin: Sign in
     signout: Sign out
-  msg:
-  err:
-  view:
-    app_title: "Meshiya"
-
+    microposts: Microposts
+    admin: admin
+  locale:
+    ja: 日本語
+    en: English
