@@ -1,7 +1,11 @@
 <% if object.errors.any? %>
   <div id="error_explanation">
     <div class="alert alert-error">
-      The form contains <%= pluralize( object.errors.count, "error" ) %>
+      <% if I18n.locale == :en %>
+        The form contains <%= pluralize( object.errors.count, "error" ) %>
+      <% else %>
+        <%= object.errors.count %> <%= t('.contains') %>
+      <% end %>
     </div>
     <ul>
       <% object.errors.full_messages.each do |msg| %>

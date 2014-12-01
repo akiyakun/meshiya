@@ -15,3 +15,5 @@ ja:
     user_info:
       view_profile: プロフィール
       post_count: のポスト
+    error_messages:
+      contains: 個のエラーがあります。

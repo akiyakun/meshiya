@@ -10,11 +10,11 @@ describe "Static pages" do
 
 	describe "Home page" do
 		before { visit root_path }
-		let( :heading )		{ 'hungry' }
+		let( :heading )		{ _t('shared.home_no_signed_in.welcome_msg') }
 		let( :page_title )	{ '' }
 
 		it_should_behave_like "all static pages"
-		it { should_not have_title( '| Home' ) }
+		it { should_not have_title( '| ' + _t('static_pages.home.title') ) }
 
 		describe "for signed-in users" do
 			let( :user ) { FactoryGirl.create( :user ) }
@@ -63,8 +63,8 @@ describe "Static pages" do
 
 		# click_link t('w.about')
 		# expect( page ).to have_title( full_title( 'About Us' ) )
-		click_link t('w.help')
-		expect( page ).to have_title( full_title( 'Help' ) )
+		click_link _t('static_pages.help.title')
+		expect( page ).to have_title( full_title( _t('static_pages.help.title') ) )
 		# click_link t('w.contact')
 		# expect( page ).to have_title( full_title( 'Contact' ) )
 		# click_link t('w.home')	# 一度ホームに移動

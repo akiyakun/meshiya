@@ -1,9 +1,13 @@
 Rails.application.routes.draw do
+  # get '/:locale' => 'static_pages#home'
+  # get '/(:locale)' => 'static_pages#home'
   root 'static_pages#home'
-  get '/' => redirect( "/%{locale}/users" )
-  match '/:locale',   to: 'static_pages#home',    via: 'get'
+  # get '/' => redirect( "/%{locale}/users" )
+  # match '/:locale',   to: 'static_pages#home',    via: 'get'
 
-  scope "/:locale" do
+  # FIXME: rspecでパスがうまく動いてくれない・・・
+  # scope "/:locale" do
+  # scope "(:locale)", locale: /en|ja/ do
     resources :users
     resources :sessions, only: [:new, :create, :destroy]
     resources :microposts, only: [:create, :destroy]
@@ -16,7 +20,7 @@ Rails.application.routes.draw do
     match '/help',      to: 'static_pages#help',    via: 'get'
     match '/about',     to: 'static_pages#about',   via: 'get'
     match '/contact',   to: 'static_pages#contact', via: 'get'
-  end
+  # end
 
   # match ':controller(/:action(/:id))', via: [ :get, :post, :patch ]
 end
