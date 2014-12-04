@@ -121,7 +121,7 @@ describe "User Pages" do
 		it { should have_content( _t('users.index.title') ) }
 
 		describe "pagination" do
-			before( :all )	{ 30.times { FactoryGirl.create( :user ) } }
+			before( :all )	{ 10.times { FactoryGirl.create( :user ) } }
 			after( :all )	{ User.delete_all }
 
 			it { should have_selector( 'div.pagination' ) }

@@ -10,6 +10,9 @@ ruby '2.1.3'
 gem 'rails', '4.1.6'
 gem 'sprockets', '2.11.0'
 gem 'will_paginate', '3.0.7'
+gem 'paperclip', '4.2'
+
+gem 'azure', '0.6.4'
 
 # Use Bootstraps
 gem 'bootstrap-sass', '2.3.2.0'

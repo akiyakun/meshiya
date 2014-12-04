@@ -13,7 +13,7 @@ require "sprockets/railtie"
 # you've limited to :test, :development, or :production.
 Bundler.require(*Rails.groups)
 
-module SampleApp
+module RailsApp
   class Application < Rails::Application
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration should go into files in config/initializers
@@ -29,5 +29,6 @@ module SampleApp
     config.i18n.default_locale = :ja
 
     config.assets.precompile += %w( *.png *.jpg, *.jpeg *.git )
+    config.assets.initialize_on_precompile = false
   end
 end
