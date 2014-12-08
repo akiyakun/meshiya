@@ -11,10 +11,15 @@
   <div class="span8">
     <% if @user.microposts.any? %>
       <h3><%= t('w.microposts') %> (<%= @user.microposts.count %>)</h3>
+
+      <%= render partial: 'shared/feed_item', collection: @user.microposts %>
+
+      <% if false %>
       <ol class="microposts">
         <%= render @microposts %>
       </ol>
       <%= will_paginate @microposts %>
+      <%   end %>
     <% end %>
   </div>
 </div>

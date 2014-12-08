@@ -15,6 +15,8 @@ Bundler.require(*Rails.groups)
 
 module RailsApp
   class Application < Rails::Application
+
+
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration should go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded.
@@ -23,6 +25,10 @@ module RailsApp
     # Run "rake -D time" for a list of tasks for finding time zone names. Default is UTC.
     # config.time_zone = 'Central Time (US & Canada)'
 
+    # Set autoload lib/ directry
+    config.autoload_paths += %W(#{config.root}/lib)
+    config.autoload_paths += Dir["#{config.root}/lib/**/"]
+
     # The default locale is :en and all translations from config/locales/*.rb,yml are auto loaded.
     config.i18n.load_path += Dir[Rails.root.join( 'config', 'locales', '**', '*.{rb,yml}' ).to_s]
     # I18n.enforce_available_locales = true
@@ -30,5 +36,20 @@ module RailsApp
 
     config.assets.precompile += %w( *.png *.jpg, *.jpeg *.git )
     config.assets.initialize_on_precompile = false
+
+
+
+    # Paperclip
+    config.paperclip_defaults = {
+        storage: :azure_storage,
+        path: ":class/:id/:attachment/:style/:filename",
+        azure_credentials: {
+          account_name: Rails.application.secrets.azure_credentials['account_name'],
+          access_key: Rails.application.secrets.azure_credentials['access_key']
+        },
+        azure_container: "meshiya",
+        url: ":azure_domain_url",
+    }
+
   end
 end
