@@ -70,8 +70,6 @@ module Paperclip
       end
 
       def flush_writes #:nodoc:
-    # to_file
-    Rails.logger.debug( @queued_for_write )
         @queued_for_write.each do |style, file|
           begin
             Rails.logger.debug( 'save' )
