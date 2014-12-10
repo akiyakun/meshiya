@@ -2,7 +2,7 @@
   <%= link_to gravatar_for( feed_item.user ), feed_item.user %>
 
   <%= feed_item.image.url %>
-  <%= image_tag feed_item.to_azure_url(:medium) %>
+  <%= image_tag feed_item.image.url(:medium) %>
   <%= image_tag feed_item.image.url(:thumb) %>
 
   <span class="user">

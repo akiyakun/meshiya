@@ -10,6 +10,12 @@ $grayMediumLight: #eaeaea;
   box-sizing: border-box;
 }
 
+@mixin box_radius {
+  -webkit-border-radius:10px 10px 10px 10px;
+  -moz-border-radius:10px 10px 10px 10px;
+  border-radius:10px 10px 10px 10px;
+}
+
 /* universal */
 
 html {
@@ -18,6 +24,8 @@ html {
 
 body {
   padding-top: 60px;
+  // background: #f7f3e8;
+  background: #f5ead0 image-url("bg.png") repeat;
 }
 
 section {
@@ -62,8 +70,46 @@ p {
   line-height: 1.7em;
 }
 
+/* meshiya */
+
+._box {
+  background: #f9f9f9;
+  // width: 90%;
+  // padding: 10px;
+  // margin: 0 auto;
+  border: 1px outset #ffffff;
+  box-shadow: 4px 4px 6px 2px rgba(0, 0, 0, 0.3);
+  // @include box_radius
+  @include border-radius(10px);
+}
+
+._box-inner {
+  padding: 10px;
+}
+
+._hr {
+  border: 2px solid #666666;
+  // width: 100%;
+  @include border-radius(2px);
+}
 
 /* header */
+
+/* extend bootstrap */
+// .navbar-bg {
+//   // @extend .navbar-inverse !optional;
+//   background-color: #c30d20;
+//   // background-image: -webkit-linear-gradient( top, red, blue );
+//   background-image: -webkit-linear-gradient( top, #c30d20, #c30d20 );
+// }
+
+// ._nav-text {
+//   color: #00ff00;
+//   font-size: 1.7em;
+//   text-shadow: 2px 2px 3px #ff00ff;
+//   // border-left: 1px solid rgba(255, 255, 255, .75);
+//   // border-right: 1px solid rgba(0, 0, 0, .1);
+// }
 
 #logo {
   float: left;

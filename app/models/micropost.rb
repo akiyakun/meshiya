@@ -18,7 +18,4 @@ class Micropost < ActiveRecord::Base
 	# 	content_type: { content_type: ["image/jpg", "image/png"] },
 	# 	size: { less_than: 2.megabytes }
 
-	def to_azure_url( style )
-		image.url( style )
-	end
 end

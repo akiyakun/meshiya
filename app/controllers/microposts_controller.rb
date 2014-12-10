@@ -15,15 +15,12 @@ class MicropostsController < ApplicationController
 
 	def destroy
 		@micropost.destroy
-		# @micropost.image = nil
-		# @micropost.save
 		redirect_to root_url
 	end
 
 	private
 		def micropost_params
 			params.require( :micropost ).permit( :content, :image )
-			# params.require( :micropost ).permit( :image )
 		end
 
 		# def correct_user
