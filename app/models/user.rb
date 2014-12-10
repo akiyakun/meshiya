@@ -48,6 +48,12 @@ class User < ActiveRecord::Base
 		relationships.find_by!( followed_id: other_user.id ).destroy
 	end
 
+
+
+	def micropost
+		return Micropost
+	end
+
 private
 	def create_remember_token
 		self.remember_token = User.encrypt( User.new_remember_token )
