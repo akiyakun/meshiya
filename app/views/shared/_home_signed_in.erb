@@ -19,13 +19,14 @@
     <%= render 'shared/feed' %>
 <% end %>
 
-  <h3>最近の投稿</h3>
-  <% if @feed_items.any? %>
-  <%= will_paginate @feed_items %>
-  <ol class="microposts">
-    <%= render partial: 'shared/feed_item', collection: @feed_items %>
-  </ol>
-  <%= will_paginate @feed_items %>
-  <% end %>
-</div>
+  </div>
+
+    <h3>最近の投稿</h3>
+    <% if @feed_items.any? %>
+      <%= will_paginate @feed_items, previous_label: t('w.previous'), next_label: t('w.next') %>
+      <ol class="microposts">
+        <%= render partial: 'shared/feed_item', collection: @feed_items %>
+      </ol>
+      <%= will_paginate @feed_items, previous_label: t('w.previous'), next_label: t('w.next') %>
+    <% end %>
 </div>

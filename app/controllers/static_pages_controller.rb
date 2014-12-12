@@ -5,7 +5,8 @@ class StaticPagesController < ApplicationController
       # @feed_items = current_user.feed.paginate( page: params[ :page ] )
       @micropost = current_user.microposts.build
       @aa = Micropost
-      @feed_items = Micropost.paginate( page: params[ :page ] ).order( 'updated_at DESC' )
+      @feed_items = Micropost.paginate(
+        page: params[ :page ], per_page: 10 ).order( 'updated_at DESC' )
     end
   end
 
