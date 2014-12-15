@@ -14,7 +14,11 @@
     </li>
   </div>
   <div class="span12">
-    <span class="span4 image"><%= image_tag feed_item.image.url(:medium) %></span>
+    <span class="span4 image">
+      <%#= link_to image_tag( feed_item.image.url(:medium) ), feed_item.image.url %>
+      <%= link_to image_tag( feed_item.image.url(:medium) ),
+        feed_item.image.url, :'data-lightbox' => feed_item.id %>
+    </span>
     <span class="span6 content"><%= feed_item.content %></span>
   </div>
 </div>

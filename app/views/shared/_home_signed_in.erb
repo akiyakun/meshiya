@@ -20,7 +20,6 @@
 <% end %>
 
   </div>
-
     <h3>最近の投稿</h3>
     <% if @feed_items.any? %>
       <%= will_paginate @feed_items, previous_label: t('w.previous'), next_label: t('w.next') %>
