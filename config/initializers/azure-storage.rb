@@ -70,15 +70,20 @@ module Paperclip
       end
 
       def flush_writes #:nodoc:
+        target_container = WAZ::Blobs::Container.find(container_name)
         @queued_for_write.each do |style, file|
           begin
             Rails.logger.debug( 'save' )
             log("saving to Azure #{path(style)}")
-            WAZ::Blobs::Container.find(container_name).store(path(style), file.read, instance_read(:content_type), {:x_ms_blob_cache_control=>"max-age=315360000, public"})
+            target_container.store(
+               path(style),
+               file.read,
+               instance_read(:content_type),
+               {:x_ms_blob_cache_control=>"max-age=315360000, public"} )
           rescue
             log("error saving to Azure #{path(style)}")
             ## If container doesn't exist we create it
-            if WAZ::Blobs::Container.find(container_name).blank?
+            if target_container.blank?
               WAZ::Blobs::Container.create(container_name).public_access = "blob"
               log("retryng saving to Azure #{path(style)}")
               retry
@@ -89,10 +94,11 @@ module Paperclip
       end
 
       def flush_deletes #:nodoc:
+        target_container = WAZ::Blobs::Container.find(container_name)
         @queued_for_delete.each do |path|
           begin
             log("deleting #{path}")
-            WAZ::Blobs::Container.find(container_name)[path].destroy!
+            target_container[path].destroy!
           rescue
             log("error deleting #{path}")
           end

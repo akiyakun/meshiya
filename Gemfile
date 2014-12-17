@@ -15,6 +15,7 @@ gem 'jquery-ui-rails', '5.0.3'
 gem 'sprockets', '2.11.0'
 gem 'will_paginate', '3.0.7'
 gem 'paperclip', '4.2'
+gem 'fastimage', '1.6.6'
 
 gem 'azure', '0.6.4'
 gem "waz-storage", '1.3.6'

@@ -5,7 +5,14 @@ class Micropost < ActiveRecord::Base
 	validates :content, presence: true, length: { maximum: 140 }
 	validates :user_id, presence: true
 
-	has_attached_file :image, styles: { medium: "300x300", thumb: "100x100" }#,
+	has_attached_file :image,
+		styles: { original: "800x600", medium: "300x300", thumb: "100x100" },
+		convert_options: {
+			all: [ "-strip" ],
+			original: [ "-define", "jpeg:size=800x600" ],
+			medium: [ "-define", "jpeg:size=300x300" ],
+			thumb: [ "-define", "jpeg:size=100x100" ]
+		}
 		# storage: :azure1,
 		# storage: :azure_storage,
 		# default_url: "/images/:style/missing.png"
