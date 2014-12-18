@@ -1,6 +1,6 @@
 ja:
   app:
-    title: "メシヤ"
+    title: "Meshiya"
     project_name: Sansa
     copyright: "Copyright (c) 2014 AQUALIA CO,LTD All Rights Reserved."
     www_url: 'http://meshiya.herokuapp.com/'
@@ -16,4 +16,15 @@ ja:
     error: エラー
     previous: 前へ
     next: 次へ
+  activerecord:
+    attributes:
+      micropost:
+        content: 文章
+        image: 画像
+    errors:
+      models:
+        micropost:
+          attributes:
+            image:
+              blank: を選択してください。
 

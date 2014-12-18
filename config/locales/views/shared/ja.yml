@@ -16,4 +16,5 @@ ja:
       view_profile: プロフィール
       post_count: のポスト
     error_messages:
-      contains: 個のエラーがあります。
+      contains: 箇所のエラーがあります。
+      

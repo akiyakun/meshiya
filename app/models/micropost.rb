@@ -5,6 +5,8 @@ class Micropost < ActiveRecord::Base
 	validates :content, presence: true, length: { maximum: 140 }
 	validates :user_id, presence: true
 
+	validates_presence_of :image
+
 	has_attached_file :image,
 		styles: { original: "800x600", medium: "300x300", thumb: "100x100" },
 		convert_options: {

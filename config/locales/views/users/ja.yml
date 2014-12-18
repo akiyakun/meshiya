@@ -17,3 +17,7 @@ ja:
       password_confirmation: パスワードの再入力
     user:
       delete: 削除
+      welcome: アカウントが作成されました
+      destroyed: 削除されました
+      updated: 更新しました
+

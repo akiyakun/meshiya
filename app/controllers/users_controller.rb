@@ -20,8 +20,8 @@ class UsersController < ApplicationController
   	@user = User.new( user_params )
   	if @user.save
   		sign_in @user
-  		flash[:success] = "Welcome to the Sample App!"
-  		redirect_to @user
+  		flash[:success] = I18n.t('users.user.welcome')
+  		redirect_to root_path
   	else
   		render 'new'
   	end
@@ -33,7 +33,7 @@ class UsersController < ApplicationController
       redirect_to( root_path )
     else
       user.destroy
-      flash[ :success ] = "User destroyed."
+      flash[ :success ] = I18n.t('users.user.destroyed')
       redirect_to users_url
     end
   end
@@ -44,7 +44,7 @@ class UsersController < ApplicationController
   def update
     if @user.update_attributes( user_params )
       # 更新に成功した場合を扱う
-      flash[ :success ] = "Profile updated"
+      flash[ :success ] = I18n.t('users.user.updated')
       redirect_to @user
     else
       render 'edit'

@@ -15,7 +15,6 @@
 //= require bootstrap
 //= require turbolinks
 
-//= require js/lightbox
-//= require js/lightbox.min
+//= require bootstrap-lightbox
 
 //= require_tree .
