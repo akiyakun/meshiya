@@ -1,31 +1,30 @@
 <div class="row">
-  <aside class="span12 _box">
-    <div class="_box-inner">
-      <section>
-        <%= render 'shared/user_info' %>
-      </section>
-      <section>
-        <%= render 'shared/micropost_form' %>
-      </section>
-    </div>
-  </aside>
-</div>
-<div class="row">
-  <div class="span12">
-    <hr class="_hr">
+  <span class="span12">
+    <aside class="offset1 span10 _box">
+      <div class="_box-inner">
+        <section>
+          <%= render 'shared/user_info' %>
+        </section>
+        <section>
+          <%= render 'shared/micropost_form' %>
+        </section>
+      </div>
+    </aside>
 
-<% if false %>
-    <h3><%= t('w.microposts') %></h3>
-    <%= render 'shared/feed' %>
-<% end %>
-
-  </div>
-    <h3>最近の投稿</h3>
     <% if @feed_items.any? %>
+    <span class="offset1 span10">
+      <hr class="_hr">
+      <h3>最新のレビュー</h3>
       <%= will_paginate @feed_items, previous_label: t('w.previous'), next_label: t('w.next') %>
+    </span>
+    <span class="offset1 span10 review-box">
       <ol class="microposts">
         <%= render partial: 'shared/feed_item', collection: @feed_items %>
       </ol>
+    </span>
+    <span class="offset1 span10">
       <%= will_paginate @feed_items, previous_label: t('w.previous'), next_label: t('w.next') %>
+    </span>
     <% end %>
+  </span>
 </div>

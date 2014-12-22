@@ -1,37 +1,46 @@
-<div class="row">
-  <div class="span12">
-    <li id="<%= feed_item.id %>">
-      <%= link_to gravatar_for( feed_item.user ), feed_item.user %>
-      <span class="user">
-        <%= link_to feed_item.user.name, feed_item.user %>
-      </span>
+<div class="_box micropost">
+  <li id="<%= feed_item.id %>" class="_box-inner">
+    <div>
       <span class="timestamp">
         <%= t('.posted') %> <%= time_ago_in_words( feed_item.created_at ) %> <%= t('.ago') %>
       </span>
       <span>
         <%= render 'shared/micropost_delete_link', object: feed_item %>
       </span>
-    </li>
-  </div>
-  <div class="span12">
-    <div class="span4 image">
+      <%= link_to gravatar_for( feed_item.user ), feed_item.user %>
+      <span class="user">
+        <%= link_to feed_item.user.name, feed_item.user %>
+      </span>
+      <span class="point">
+        100点
+      </span>
+      <p>ppp ppp</p>
+    </div>
+
+    <hr>
+
+    <div>
       <%#= link_to image_tag( feed_item.image.url(:medium) ),
-        feed_item.image.url, :'data-lightbox' => 'image' << feed_item.id %>
+      feed_item.image.url, :'data-lightbox' => 'image' << feed_item.id %>
 
-
-<% if true %>
       <div id="image<%= feed_item.id %>" class="lightbox hide fade" tabindex="-1" role="dialog" aria-hidden="true">
         <div class='lightbox-content'>
-          <%= image_tag( feed_item.image.url ) %>
+          <%= image_tag( feed_item.image.url, size: "800x600" ) %>
         </div>
       </div>
 
-      <a data-toggle="lightbox" href="#image<%= feed_item.id %>" class="thumbnail">
-        <%= image_tag( feed_item.image.url(:medium) ) %>
-      </a>
-<% end %>
+      <div class="image">
+        <a data-toggle="lightbox" href="#image<%= feed_item.id %>">
+          <%= image_tag( feed_item.image.url(:medium), size: "200x200" ) %>
+        </a>
+      </div>
+
+      <div class="content"><%= feed_item.content %></div>
 
     </div>
-    <span class="span6 content"><%= feed_item.content %></span>
-  </div>
+
+    <div style="clear:left">
+    </div>
+
+  </li>
 </div>

@@ -8,11 +8,11 @@ class Micropost < ActiveRecord::Base
 	validates_presence_of :image
 
 	has_attached_file :image,
-		styles: { original: "800x600", medium: "300x300", thumb: "100x100" },
+		styles: { original: "800x600", medium: "200x200", thumb: "100x100" },
 		convert_options: {
 			all: [ "-strip" ],
 			original: [ "-define", "jpeg:size=800x600" ],
-			medium: [ "-define", "jpeg:size=300x300" ],
+			medium: [ "-define", "jpeg:size=200x200" ],
 			thumb: [ "-define", "jpeg:size=100x100" ]
 		}
 		# storage: :azure1,
