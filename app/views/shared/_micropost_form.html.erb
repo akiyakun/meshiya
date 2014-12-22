@@ -1,9 +1,34 @@
-
 <%= form_for( @micropost, :html => { multipart: true } ) do |f| %>
   <%= render 'shared/error_messages', object: f.object %>
-  <div class="field">
-    <%= f.text_area :content, placeholder: t('.placeholder') %>
-    <%= f.file_field :image %>
+  <div class="field form-horizontal" style="width:80%">
+    <div class="control-group">
+      <label class="control-label" for="inputTitle">タイトル</label>
+      <div class="controls">
+        <%= f.text_field :title, id: "inputTitle" %>
+      </div>
+    </div>
+    <div class="control-group">
+      <label class="control-label" for="inputPoint">点数</label>
+      <div class="controls" style="width:10%">
+        <%= f.number_field :point, id: "inputPoint", placeholder: 50, min:0, max:100 %>
+        <span class="help-block">0 ～ 100</span>
+      </div>
+    </div>
+    <div class="control-group">
+      <label class="control-label" for="inputContent">感想</label>
+      <div class="controls">
+        <%= f.text_area :content, id: "inputContent", placeholder: t('.placeholder') %>
+        <span class="help-block">140字以内</span>
+      </div>
+    </div>
+    <div class="control-group">
+      <label class="control-label" for="inputImage">写真</label>
+      <div class="controls">
+        <%= f.file_field :image, id: "inputImage" %>
+      </div>
+    </div>
   </div>
-  <%= f.submit t('.submit'), class: "btn btn-large btn-primary" %>
+  <div style="margin: 0 0 0 100px">
+    <%= f.submit t('.submit'), class: "btn btn-large btn-primary" %>
+  </div>
 <% end %>

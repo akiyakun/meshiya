@@ -2,9 +2,12 @@ class Micropost < ActiveRecord::Base
 	belongs_to :user
 	default_scope -> { order( 'created_at DESC' ) }
 
+	validates :title, presence: true
+	validates :point, presence: true, inclusion: { in: 0..100 }
 	validates :content, presence: true, length: { maximum: 140 }
 	validates :user_id, presence: true
 
+	validates_numericality_of :point, only_integer: true
 	validates_presence_of :image
 
 	has_attached_file :image,

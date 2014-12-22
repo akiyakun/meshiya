@@ -19,6 +19,8 @@ ja:
   activerecord:
     attributes:
       micropost:
+        title: タイトル
+        point: 点数
         content: 文章
         image: 画像
     errors:
