@@ -3,6 +3,7 @@
 /* mixins, variables, etc. */
 
 $grayMediumLight: #eaeaea;
+$meshiyaBaseColor: #ab3100;
 
 @mixin box_sizing {
   -moz-box-sizing: border-box;
@@ -189,11 +190,6 @@ aside {
   }
 }
 
-.gravatar {
-  float: left;
-  margin-right: 10px;
-}
-
 /* forms */
 
 input, textarea, select, .uneditable-input {
@@ -221,6 +217,12 @@ input {
   @extend .error;
 }
 
+.gravatar {
+  // float: right;
+  // margin-right: 10px;
+  border: 1px solid #999999;
+}
+
 /* users index */
 .users {
   list-style: none;
@@ -238,7 +240,7 @@ input {
 /* microposts */
 
 .review-box {
-  background: #555555;
+  background: $meshiyaBaseColor;
   // width: 90%;
   // padding: 10px;
   // margin: 0 auto;
@@ -274,16 +276,22 @@ input {
     border: 1px solid #999999;
     // box-shadow: 4px 4px 6px 2px rgba(0, 0, 0, 0.3);
     @include border-radius(6px);
-}
+  }
   .timestamp {
     color: $grayLight;
   }
   .user {
     // float: right;
   }
-  .gravatar {
-    // float: right;
-    // margin-right: 10px;
+
+  .title {
+    margin: 12px 0;
+    font-weight:bold;
+    font-size:large;
+
+    border-bottom: solid 2px $meshiyaBaseColor;
+    border-left: solid 14px $meshiyaBaseColor;
+    text-indent: 0.5em;
   }
   .image {
     // padding: 10px 0 0 0;

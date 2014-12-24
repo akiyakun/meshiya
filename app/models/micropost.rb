@@ -2,6 +2,7 @@ class Micropost < ActiveRecord::Base
 	belongs_to :user
 	default_scope -> { order( 'created_at DESC' ) }
 
+	validates :shop_name, presence: true
 	validates :title, presence: true
 	validates :point, presence: true, inclusion: { in: 0..100 }
 	validates :content, presence: true, length: { maximum: 140 }

@@ -19,6 +19,7 @@ ja:
   activerecord:
     attributes:
       micropost:
+        shop_name: 店名
         title: タイトル
         point: 点数
         content: 文章

@@ -2,9 +2,9 @@
   <%= render 'shared/error_messages', object: f.object %>
   <div class="field form-horizontal" style="width:80%">
     <div class="control-group">
-      <label class="control-label" for="inputTitle">タイトル</label>
+      <label class="control-label" for="inputShopName">店名</label>
       <div class="controls">
-        <%= f.text_field :title, id: "inputTitle" %>
+        <%= f.text_field :shop_name, id: "inputShopName" %>
       </div>
     </div>
     <div class="control-group">
@@ -12,6 +12,12 @@
       <div class="controls" style="width:10%">
         <%= f.number_field :point, id: "inputPoint", placeholder: 50, min:0, max:100 %>
         <span class="help-block">0 ～ 100</span>
+      </div>
+    </div>
+    <div class="control-group">
+      <label class="control-label" for="inputTitle">タイトル</label>
+      <div class="controls">
+        <%= f.text_field :title, id: "inputTitle" %>
       </div>
     </div>
     <div class="control-group">
